@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+    <header>
+        <h1>Coding Quiz!</h1>
+        <p>
+            You will have 75 seconds to answer four Javascript related questions. Wrong answers will penalize you with a reduction of 10 seconds. Have fun and happy coding!
+        </p>
+        <p id="timer">Timer:</p>
+        <div class="btn-wrap">
+            <button class="btn" id="start">Start</button>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <h1 class="page-content" id="page-content"></h1>
+            <ul class="question-list" id="quiz"></ul>
+        </section>
+    </main>
+    <footer>
+        <a href="#high-scores">View High Scores</a>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
