@@ -1,22 +1,67 @@
-header {
-    display: flex;
-    margin: auto;
-    padding: 25px;
+body {
+    font-family: Times;
+}
+
+a {
     color:#048776;
-    flex-direction: column;
-    align-items: center;
-    font-size: larger;
+    text-decoration: none;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
+button {
+    display: inline-block;
+    margin: 10px;
+    font-size: 100%;
+    background-color: #048776;
+    border-radius: 5px;
+    padding: 2px 7px;
+    color: black;
+    border: 0;
 }
 
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.options button {
+    display: block;
+}
+
+input[type="text"] {
+    font-size: 100%;
+}
+
+ol {
+    padding-left: 0px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.start {
+    text-align: center;
+}
+
+.scores {
+    position: absolute;
+    top: 10px;
+    left: 10px
+}
+
+.feedback {
+    font-style: italic;
+    font-size: 120%;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: red;
+    border-top: 2px solid gray;
+}
+
+.timer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.wrapper {
+    margin: 100px auto 0 auto;
+    max-width: 500px;
 }
