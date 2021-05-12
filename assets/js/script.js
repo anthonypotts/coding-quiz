@@ -7,11 +7,8 @@ var test, test_status, question, choice, choices, chA, chB, chC, chD;
 var questions = [
     {
         question: "Commonly used data types do not include:",
-        a: "strings",
-        b: "booleans",
-        c: "alerts",
-        d: "numbers",
-        answer: "C"
+        choices: ["strings", "booleans", "alerts", "numbers"],
+        answer: "alerts"
     },
     {
         question: "The condition in an if/else statement is enclosed with ____",

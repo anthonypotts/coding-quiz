@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Coding Quiz</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Coding Quiz</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+
 <body>
-    <header>
+    <div class="highscores"><a href="highscores.html">View Highscores</a></div>
+
+    <div class="timer">TIME<span id="time">0</span></div>
+
+    <div class="wrapper">
+        <div id="start-screen" class="start">
+            <h1>Coding Quiz!</h1>
+            <p>
+                You will have 75 seconds to answer four Javascript
+                related questions. Wrong answers will penalize you 
+                with a reduction of 10 seconds. 
+                Have fun and happy coding!
+            </p>
+            <button id="start">Start</button>
+        </div>
+
+        <div id="questions" class="questions">
+            <h2 id="q-title"></h2>
+            <div id="options" class="options"></div>
+        </div>
+
+        <div id="end-screen" class="questions">
+            <h2>Finished!</h2>
+            <p>Score: <span id="final-score"></span></p>
+            <p>
+                Please enter intials: <input type="text" id="intials" max="3" />
+                <button id="submit">Submit!</button>
+            </p>
+        </div>
+    </div>
+
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
+    <!-- <header>
         <h1>Coding Quiz!</h1>
         <p>
             You will have 75 seconds to answer four Javascript related questions. Wrong answers will penalize you with a reduction of 10 seconds. Have fun and happy coding!
@@ -20,13 +54,13 @@
     </header>
     <main>
         <section class="container">
-            <h1 class="page-content" id="page-content"></h1>
-            <ul class="question-list" id="quiz"></ul>
+            <h1 class="page-content" id="test-status"></h1>
+            <div class="question-list" id="test"></div>
         </section>
     </main>
     <footer>
         <a href="#high-scores">View High Scores</a>
     </footer>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script> -->
 </body>
 </html>
