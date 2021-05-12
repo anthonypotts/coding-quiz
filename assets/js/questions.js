@@ -1,9 +1,3 @@
-// var timerEl = document.getElementById("timer");
-// var startBtn = document.getElementById("start");
-var pos = 0;
-var correct = 0;
-var test, test_status, question, choice, choices, chA, chB, chC, chD;
-
 var questions = [
     {
         question: "Commonly used data types do not include:",
@@ -12,35 +6,23 @@ var questions = [
     },
     {
         question: "The condition in an if/else statement is enclosed with ____",
-        a: "quotes",
-        b: "curly brackets",
-        c: "parenthesis",
-        d: "square brackets",
-        answer: "C"
+        choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+        answer: "parentheses"
     },
     {
         question: "Arrays in Javascript can be used to store ____",
-        a: "numbers and strings",
-        b: "other arrays",
-        c: "booleans",
-        d: "all of the above",
-        answer: "A"
+        choices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+        answer: "all of the above"
     },
     {
         question: "String values must be enclosed within ____ when being assigned to variables",
-        a: "commas",
-        b: "curly brackets",
-        c: "quotes",
-        d: "parenthesis",
-        answer: "C"
+        choices: ["commas", "curly brackets", "quotes", "parentheses"],
+        answer: "quotes"
     },
     {
         question: "A very useful tool during development and debugging for printing content to the debugger is ____",
-        a: "Javascript",
-        b: "termninal/bash",
-        c: "for loops",
-        d: "console.log",
-        answer: "D"
+        choices: ["Javascript", "terminal/bash", "for loops", "console.log"],
+        answer: "console.log"
     }
 ];
 
