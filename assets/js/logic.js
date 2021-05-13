@@ -6,20 +6,25 @@ var timerId;
 var questionsEl = document.getElementById("questions");
 var timerEl = document.getElementById("time");
 var optionsEl = document.getElementById("options");
-var submitEl = document.getElementById("submit");
+var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
+var feedbackEl = document.getElementById("feedback");
+
 
 // quiz logic
 function startQuiz() {
-    // hide start screen
+    // hide
     var startScreenEl = document.getElementById("start-screen");
     startScreenEl.setAttribute("class", "hide");
 
+    // reveal questions
     questionsEl.removeAttribute("class");
 
+    // start timer
     timerId = setInterval(clockTick, 1000);
 
+    // show time
     timerEl.textContent = time;
 
     getQuestion();
@@ -37,7 +42,7 @@ function getQuestion() {
     optionsEl.innerHTML = "";
 
     // loop choices
-    currentQuestion.options.forEach(function(choice, i) {
+    currentQuestion.options.forEach(function(option, i) {
         //creates button for option
         var optionNode = document.createElement("button");
         optionNode.setAttribute("class", "option");
@@ -90,12 +95,15 @@ function quizEnd() {
     //stop timer
     clearInterval(timerId);
 
+    // end screen
     var endScreenEl = document.getElementById("end-screen");
     endScreenEl.removeAttribute("class");
 
+    // reveal final score
     var finalScoreEl = document.getElementById("final-score");
     finalScoreEl.textContent = time;
 
+    // hide questions
     questionsEl.setAttribute("class", "hide");
 }
 
@@ -112,7 +120,8 @@ function saveHighscore() {
     var initials = initialsEl.value.trim();
 
     if (initials !== "") {
-        var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+        var highscores = 
+        JSON.parse(window.localStorage.getItem("highscores")) || [];
 
         var newScore = {
             score: time,
@@ -133,8 +142,8 @@ function checkForEnter(event) {
     }
   }
   
-//   // user clicks button to submit initials
-//   submitBtn.onclick = saveHighscore;
+  // user clicks button to submit initials
+  submitBtn.onclick = saveHighscore;
   
   // user clicks button to start quiz
   startBtn.onclick = startQuiz;
